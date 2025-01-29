@@ -1,0 +1,60 @@
+
+.settingsform{
+    margin-top: 56px;
+    /* border: black solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.settings-compo{
+    width: 392px;
+    /* border: black solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.settings-compo label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #181820;
+
+}
+
+.settings-compo input{
+    height: 29px;
+    width: 266px;
+    padding: 2px 14px;
+    border: 1px solid #ECECF2;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3B3C51;
+
+}
+
+.settings-btns{
+    /* border: black solid; */
+    /* margin-top: 50px; */
+    margin-bottom: 18px;
+    /* display: flex; */
+}
+
+.settings-btns button{
+    width: 392px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+    
+}

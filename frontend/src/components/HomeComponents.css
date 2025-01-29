@@ -1,0 +1,190 @@
+.home{
+    display: flex; 
+    height: 100vh;
+}
+
+.sidebar{
+    border-right: 1px #F6F6F9 solid;
+    /* width: Fill (240px)px; */
+    width: 21%;
+    height: Fill (485px)px;
+    gap: 12px;
+    opacity: 0px;
+    background-color: #FFFFFF;
+}
+
+
+.dashboard{
+    width: 216px;
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3B3C51;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+}
+
+.dashboard:hover {
+    background-color: #F3F7FD;
+    border-radius: 8px;
+    color: #1B48DA;
+}
+
+.dashboard.active {
+    background-color: #F3F7FD; 
+    border-radius: 8px; 
+    color: #1B48DA; 
+}
+
+
+.cuvette{
+    padding: 24px 0px 0px 24px;
+    margin-bottom: 24px;
+}
+
+.menu, .settings{
+    padding: 12px 12px;
+}
+
+.settings{
+    border-top: 1px #F6F6F9 solid;
+    border-bottom: 1px #F6F6F9 solid;
+}
+
+.main-content{
+    width: 79%;
+}
+
+.navbar {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #FFFFFF; /* Adjust based on your theme */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    border-bottom: 1px #F6F6F9 solid;
+  }
+  
+  .greeting {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .greeting-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .greeting-date {
+    font-size: 14px;
+    color: #878BA9;
+    margin-left: 30px;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .create-new {
+    background-color: #1a5fff;
+    color: #ffffff;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 37px;
+  }
+  
+  .create-new:hover {
+    background-color: #003fc2;
+  }
+
+  .search-container {
+    position: relative; /* Enables positioning for child elements */
+    display: flex;
+    align-items: center;
+    width: 240px; /* Adjust width as needed */
+    height: 40px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px; /* Position the icon inside the input field */
+    font-size: 1.2rem;
+    color: #B1B3C8; /* Icon color */
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Add left padding to make space for the icon */
+    font-size: 14px;
+    border: 1px solid #ECECF2; /* Light border */
+    border-radius: 6px; /* Rounded corners */
+    outline: none;
+    color: #878BA9;
+  }
+  
+  .search-input::placeholder {
+    color: #aaa; /* Placeholder color */
+  }
+
+  .user-icon-container {
+    position: relative;
+    cursor: pointer;
+  
+  }
+  
+  .user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDE48A;
+    color: #923E0E;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .logout-container {
+    position: absolute;
+    top: 45px; /* Adjusted to appear below the user icon */
+    right: 0; /* Sticks to the right edge of the user icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logout-button {
+    width: 128px;
+    height: 34px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #ececf2;
+    font-size: 14px;
+    font-weight: 400;
+    color: #878ba9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #f5f5f5; /* Add hover effect for better UX */
+  }
+  
+
+
+  

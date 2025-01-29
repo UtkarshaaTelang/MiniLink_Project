@@ -1,0 +1,29 @@
+.links-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: black solid; */   
+}
+
+.links-table{
+    border-radius: 12px;
+    overflow: hidden;
+    width: 916px;
+    margin-top: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 916px;
+    border-radius: 12px;
+}
+
+thead{
+    border-radius: 12px;
+    background-color: #F3F7FD;
+    height: 62px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3B3C51;
+}
+
