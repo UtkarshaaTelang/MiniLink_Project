@@ -16,7 +16,7 @@ function Login() {
     const password = document.getElementById("password").value;
 
     try {
-      const response = await axios.post(`${API_BASE}/auth/login`, { email, password });
+      const response = await axios.post(`${API_BASE}/api/auth/login`, { email, password });
       toast.success(response.data.message);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("name", response.data.name);
