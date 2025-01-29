@@ -117,7 +117,7 @@ const Navbar = () => {
   };
   
   
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://final-evaluation-test-2.onrender.com";
 
   const handleCreateShortLink = async (data) => {
     try {
