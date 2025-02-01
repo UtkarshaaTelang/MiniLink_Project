@@ -5,7 +5,7 @@ import "./Links.css";
 import { Navbar, Sidebar } from "../components/HomeComponents";
 import Pagination from "../components/Pagination";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://final-evaluation-test-2.onrender.com";
 
 const Analytics = () => {
   const [analyticsData, setAnalyticsData] = useState([]);
