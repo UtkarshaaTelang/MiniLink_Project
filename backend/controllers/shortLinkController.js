@@ -167,6 +167,7 @@ const updateShortLink = async (req, res) => {
   }
 };
 
+const BASE_URL = "https://final-evaluation-test-2.onrender.com";
 //get analytics
 const getAnalytics = async (req, res) => {
   try {
@@ -186,8 +187,13 @@ const getAnalytics = async (req, res) => {
       .skip((page - 1) * limit)
       .limit(limit);
 
+    const formattedAnalytics = analytics.map((entry) => ({
+      ...entry._doc,
+      shortLink: `${BASE_URL}/${entry.shortCode}`, // ✅ Adds full URL for short links
+    }));
+    
     res.status(200).json({
-      analytics,
+      analytics: formattedAnalytics,
       totalPages,
       currentPage: page,
     });
