@@ -52,12 +52,3 @@ function INPUT(props) {
 }
 export { INPUT };
 
-// function BUTTONS() {
-//   return (
-//     <>
-//       <button className="signup">SignUp</button>
-//       <button className="login">Login</button>
-//     </>
-//   );
-// }
-// export { BUTTONS };

@@ -1,0 +1,138 @@
+.home-container{
+    margin-left: 30px;
+    
+    margin-top: 40px;
+}
+
+.total-clicks {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #181820;
+    
+  }
+
+  .total-clicks p{
+    display: flex;
+    gap: 40px;
+  }
+
+  .total-clicks span{
+    color: #1B48DA;
+  }
+  
+  .home-content {
+    display: flex;
+    
+    gap: 20px;
+    
+
+  }
+  
+  .datewise-clicks, .device-clicks {
+    width: 400px;
+    height: 330px;
+    padding: 0px 20px;
+    border: 1px solid #ECECF2;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    color: #181820;
+
+  }
+
+  .datewise-clicks h3, .device-clicks h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #1B48DA;
+    margin-bottom: 40px;
+    
+  }
+
+  
+  .click-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    
+    
+  }
+
+  .date-span{
+    
+    width: 70px;
+
+  }
+
+  .clicks-span{
+    
+    width: 30px;
+    
+  }
+  
+  
+  
+  .progress-bar {
+    width: 60%;
+    background: #eee;
+    height: 15px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #1B48DA;
+  }
+  
+
+  /* Existing styles remain unchanged */
+
+/* 🌟 Mobile Responsive (Up to 768px) */
+@media screen and (max-width: 768px) {
+  
+  /* ✅ Adjust Home Page Layout */
+  .home-container {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* ✅ Make Total Clicks Text Smaller */
+  .total-clicks {
+    font-size: 16px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .datewise-clicks, .device-clicks {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .progress-bar {
+    width: 50%;
+  }
+}
+
+/* 🌟 Tablet Responsive (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .home-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .datewise-clicks, .device-clicks {
+    width: 48%;
+  }
+
+  .progress-bar {
+    width: 55%;
+  }
+}

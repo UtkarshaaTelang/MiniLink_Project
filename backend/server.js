@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
 const shortLinkRoutes = require("./routes/shortLinkRoutes");
+const { getOriginalUrl } = require("./controllers/shortLinkController");
 
 dotenv.config();
 
@@ -16,7 +17,12 @@ app.use(cors({ origin: "http://localhost:5173" }));
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
+
 app.use("/api/shortlink", shortLinkRoutes);
+
+app.use("/api/user", require("./routes/userRoutes"));
+
+app.get("/:shortCode", getOriginalUrl);
 
 app.get("/", (req, res) => {
   res.send("API is running...");
@@ -25,5 +31,3 @@ app.get("/", (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-console.log("API routes initialized");

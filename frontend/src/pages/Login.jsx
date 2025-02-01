@@ -8,7 +8,7 @@ import { RegisterComponents, INPUT } from "../components/RegisterComponents";
 function Login() {
   const navigate = useNavigate();
 
-  const API_BASE = "http://localhost:5000/api/auth";
+  const API_BASE = "http://localhost:5000";
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ function Login() {
     const password = document.getElementById("password").value;
 
     try {
-      const response = await axios.post(`${API_BASE}/login`, { email, password });
+      const response = await axios.post(`${API_BASE}/api/auth/login`, { email, password });
       toast.success(response.data.message);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("name", response.data.name);

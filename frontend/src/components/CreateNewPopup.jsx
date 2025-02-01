@@ -1,24 +1,32 @@
 import React, { useState } from "react";
-import axios from "axios";
-import ReactDatePicker from 'react-datepicker'
+import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./CreateNewPopup.css";
 import { IoCalendarOutline } from "react-icons/io5";
-import { toast } from 'react-toastify';
 
 
-const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) => {
-  
-  
-  const [destinationUrl, setDestinationUrl] = useState(initialData?.destinationUrl || "");
+const CreateNewPopup = ({
+  onClose,
+  title,
+  buttontext,
+  onAction,
+  initialData,
+}) => {
+  const [destinationUrl, setDestinationUrl] = useState(
+    initialData?.destinationUrl || ""
+  );
   const [remarks, setRemarks] = useState(initialData?.remarks || "");
-  const [linkExpiration, setLinkExpiration] = useState(initialData?.linkExpiration || "");
-  const [isExpirationEnabled, setIsExpirationEnabled] = useState(!!initialData?.linkExpiration);
+  const [linkExpiration, setLinkExpiration] = useState(
+    initialData?.linkExpiration || ""
+  );
+  const [isExpirationEnabled, setIsExpirationEnabled] = useState(
+    !!initialData?.linkExpiration
+  );
   const [errors, setErrors] = useState({
     destinationUrl: false,
     remarks: false,
   });
-  
+
   console.log("Selected date:", linkExpiration);
 
   const handleSubmit = () => {
@@ -29,7 +37,7 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
     };
 
     console.log("Data to be sent:", data);
-    
+
     // Validate inputs
     if (!data.destinationUrl || !data.remarks) {
       setErrors({
@@ -39,12 +47,11 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
       return;
     }
 
-    // Call the action handler passed from the parent
     if (onAction) {
       onAction(data);
     }
   };
-  
+
   return (
     <div className="popup-overlay">
       <div className="popup-container">
@@ -61,7 +68,9 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
           {/* Destination URL */}
           <div className="input-group">
             <label>
-              <span>Destination Url <span className="required">*</span></span>
+              <span>
+                Destination Url <span className="required">*</span>
+              </span>
             </label>
             <input
               type="url"
@@ -76,9 +85,11 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
           </div>
 
           {/* Remarks */}
-          <div className="input-group" >
+          <div className="input-group">
             <label>
-              <span>Remarks <span className="required">*</span></span>
+              <span>
+                Remarks <span className="required">*</span>
+              </span>
             </label>
             <textarea
               type="text"
@@ -106,8 +117,8 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
                 <div className="switch-handle"></div>
               </div>
             </label>
-            < div className="expiration-container">
-            <div className="date-picker-container">
+            <div className="expiration-container">
+              <div className="date-picker-container">
                 <ReactDatePicker
                   selected={linkExpiration}
                   onChange={(date) => setLinkExpiration(date)}
@@ -115,24 +126,21 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
                   dateFormat="MMM d, yyyy h:mm aa"
                   placeholderText="Select expiration date"
                   disabled={!isExpirationEnabled}
-                  minDate={new Date()} // Only allow future dates
+                  minDate={new Date()}
                   timeIntervals={1}
                   className="date-picker-input"
                   popperClassName="custom-datepicker-popper"
-              />
-              <IoCalendarOutline
+                />
+                <IoCalendarOutline
                   className={`calendar-icon ${
                     isExpirationEnabled ? "active" : "disabled"
                   }`}
                   onClick={(e) => {
-                    e.preventDefault(); // Prevent the default event
-                    document
-                      .querySelector(".date-picker-input")
-                      ?.focus(); // Focus on the date picker input
+                    e.preventDefault();
+                    document.querySelector(".date-picker-input")?.focus();
                   }}
                 />
               </div>
-                  
             </div>
           </div>
         </div>
@@ -161,26 +169,3 @@ const CreateNewPopup = ({ onClose, title, buttontext, onAction, initialData }) =
 };
 
 export default CreateNewPopup;
-
-
-// const [destinationUrl, setDestinationUrl] = useState("");
-  // const [remarks, setRemarks] = useState("");
-  // const [linkExpiration, setLinkExpiration] = useState("");
-  // const [isExpirationEnabled, setIsExpirationEnabled] = useState(false);
-  // const [errors, setErrors] = useState({
-  //   destinationUrl: false,
-  //   remarks: false,
-  // });
-
-  // const handleCreateNew = () => {
-  //   const newErrors = {
-  //     destinationUrl: !destinationUrl.trim(),
-  //     remarks: !remarks.trim(),
-  //   };
-  //   setErrors(newErrors);
-
-  //   if (!newErrors.destinationUrl && !newErrors.remarks) {
-  //     alert("New link created successfully! 🚀");
-  //     onClose();
-  //   }
-  // };
