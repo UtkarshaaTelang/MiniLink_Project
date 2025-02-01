@@ -138,7 +138,7 @@ const Navbar = () => {
     }
   };
   
-  const API_BASE = "http://localhost:5000";
+  
   
   const handleLogout = async () => {
     try {
@@ -165,6 +165,8 @@ const Navbar = () => {
       toast.error("Logout failed. Try again.");
     }
   };
+  
+  const API_BASE = "https://final-evaluation-test-2.onrender.com";
 
   const handleCreateShortLink = async (data) => {
     try {
