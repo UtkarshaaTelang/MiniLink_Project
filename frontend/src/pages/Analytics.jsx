@@ -88,11 +88,9 @@ const Analytics = () => {
                       </a>
                     </td>
                     <td>
-                      <a
-                        href={`${API_BASE}/${entry.shortCode}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >{`${API_BASE}/${entry.shortCode}`}</a>
+                      <a href={entry.shortLink} target="_blank" rel="noopener noreferrer">
+                       {entry.shortLink}
+                      </a>
                     </td>
                     <td>{entry.ipAddress}</td>
                     <td>{getUserDevice(entry.userAgent)}</td>
