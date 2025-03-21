@@ -13,7 +13,8 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors({origin: 'https://final-evaluation-test-2-frontend.onrender.com'}));
+// app.use(cors({origin: 'https://final-evaluation-test-2-frontend.onrender.com'}));
+app.use(cors());
 // app.use(cors({ origin: "http://localhost:5173" }));
 
 // Routes

@@ -56,12 +56,19 @@ const Analytics = () => {
         <div className="links-content">
           <div className="links-table">
             <table>
+              <colgroup>
+                <col style={{ width: "147px" }} /> {/* Timestamp */}
+                <col style={{ width: "249.5px" }} /> {/* Original Link */}
+                <col style={{ width: "249.5px" }} /> {/* Short Link */}
+                <col style={{ width: "130px" }} /> {/* IP Address */}
+                <col style={{ width: "140px" }} /> {/* User Device */}
+              </colgroup>
               <thead>
                 <tr>
                   <th>Timestamp</th>
                   <th>Original Link</th>
                   <th>Short Link</th>
-                  <th>ip address</th>
+                  <th>IP Address</th>
                   <th>User Device</th>
                 </tr>
               </thead>

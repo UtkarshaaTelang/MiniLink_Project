@@ -13,7 +13,7 @@
 
 .popup-container {
   background: white;
-  border-radius: 12px 0px 0px 12px;
+  border-radius: 12px;
   width: 440px;
   height: 570px;
 
@@ -29,7 +29,7 @@
   align-items: center;
 
   background-color: #3b3c51;
-  border-radius: 12px 0px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
   height: 55px;
   padding: 0px 20px;
 }
@@ -233,73 +233,12 @@ textarea.input-error {
 /*Media Query*/
 @media screen and (max-width: 768px) {
   .popup-container {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  .popup-header,
-  .popup-footer {
-    height: 48px;
-    padding: 10px 16px;
-  }
-
-  .popup-title {
-    font-size: 16px;
-  }
-
-  .close-button {
-    font-size: 16px;
-  }
-
-  .input-group input,
-  .input-group textarea,
-  .input-group .expiration-container input {
-    width: 100%;
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-
-  .input-group textarea {
-    height: 120px;
-  }
-
-  .expiration-container input {
-    width: 100% !important;
-  }
-
-  .popup-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .clear-button {
-    font-size: 14px;
-  }
-
-  .create-button {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .popup-container {
-    width: 440px;
+    width: 350px;
     height: 570px;
   }
 
   .input-group input,
-  .input-group textarea,
-  .input-group .expiration-container input {
-    width: 400px;
-    font-size: 16px;
-  }
-
-  .popup-footer {
-    flex-direction: row;
-    justify-content: space-between;
+  .input-group textarea {
+    width: 310px;
   }
 }

@@ -68,11 +68,10 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-
   gap: 40px;
-
   align-items: center;
   background-color: #ffffff;
+  
 }
 
 .settingspopup-txt {
@@ -80,6 +79,7 @@
   font-weight: 500;
   color: #000000;
 }
+
 .settingspopup-btn {
   display: flex;
   gap: 30px;
@@ -93,6 +93,7 @@
   cursor: pointer;
   font-size: 16px;
 }
+
 .settingspopup-btn button {
   width: 179px;
   height: 34px;
@@ -103,115 +104,70 @@
   cursor: pointer;
 }
 
-/*Media Query*/
-@media screen and (max-width: 768px) {
+
+@media (max-width: 480px) {
   .settingsform {
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .settings-compo {
-    width: 90%;
+    margin-top: 56px;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .settings-compo label {
-    font-size: 13px;
-  }
-
-  .settings-compo input {
-    width: 100%;
-    height: 34px;
-    font-size: 14px;
-  }
-
-  .settings-btns {
-    width: 90%;
-  }
-
-  .settings-btns button {
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .settings-popup {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-  }
-
-  .settingspopup-btn {
-    flex-direction: row;
     justify-content: center;
-    gap: 15px;
-    width: 100%;
-  }
-
-  .settingspopup-btn button {
-    width: auto;
-    min-width: 100px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .popup-close {
-    top: 8px;
-    right: 12px;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .settingsform {
-    gap: 25px;
-    margin-top: 30px;
+    align-items: center;
+    gap: 50px;
   }
 
   .settings-compo {
-    width: 100%;
-    gap: 5px;
-  }
-
-  .settings-compo label {
-    font-size: 12px;
+    width: 392px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
   }
 
   .settings-compo input {
-    height: 32px;
-    font-size: 13px;
-  }
-
-  .settings-btns {
-    width: 100%;
+    height: 29px;
+    width: 266px;
+    padding: 2px 14px;
+    border: 1px solid #ececf2;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px #1018280d;
   }
 
   .settings-btns button {
-    height: 38px;
-    font-size: 13px;
+    width: 392px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
   }
 
   .settings-popup {
-    width: 95%;
-    padding: 12px;
+    width: 90%; 
+    max-width: 350px; 
+    height: 170px; 
+    padding: 15px; 
+    gap: 30px; 
+  }
+
+  .settingspopup-txt {
+    font-size: 14px; 
   }
 
   .settingspopup-btn {
-    flex-direction: column;
-    gap: 10px;
+    gap: 15px; 
   }
 
   .settingspopup-btn button {
-    width: 100%;
-    height: 38px;
-    font-size: 13px;
+    width: 120px; 
+    height: 30px; 
+    font-size: 14px; 
   }
 
   .popup-close {
-    font-size: 12px;
-    top: 5px;
-    right: 10px;
+    font-size: 14px; 
+    margin-left: 315px;
+    margin-top: 0px;
   }
 }
