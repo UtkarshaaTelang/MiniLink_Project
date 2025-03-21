@@ -1,7 +1,6 @@
 import React from "react";
 import './Pagination.css';
 
-
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const getPageNumbers = () => {
         const pages = [];

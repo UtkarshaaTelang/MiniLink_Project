@@ -4,11 +4,7 @@ import { toast } from "react-toastify";
 import "../components/HomeComponents.css";
 import "../components/SettingsComponents.css";
 import { Navbar, Sidebar } from "../components/HomeComponents";
-import {
-  SettingsButton,
-  SettingsForm,
-  SettingsPopup,
-} from "../components/SettingsComponents";
+import { SettingsButton, SettingsForm, SettingsPopup } from "../components/SettingsComponents";
 
 const Settings = () => {
   const [formData, setFormData] = useState({ name: "", email: "", mobile: "" });
@@ -22,7 +18,7 @@ const Settings = () => {
     }));
   };
 
-  const API_BASE = "https://final-evaluation-test-2.onrender.com";
+  const API_BASE = "https://minilink-server.onrender.com";
 
   const handleSaveChanges = async () => {
     if (!formData.name && !formData.email && !formData.mobile) {

@@ -5,7 +5,7 @@ import "./Links.css";
 import { Navbar, Sidebar } from "../components/HomeComponents";
 import Pagination from "../components/Pagination";
 
-const API_BASE = "https://final-evaluation-test-2.onrender.com";
+const API_BASE = "https://minilink-server.onrender.com";
 
 const Analytics = () => {
   const [analyticsData, setAnalyticsData] = useState([]);

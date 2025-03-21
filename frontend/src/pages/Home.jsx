@@ -5,7 +5,7 @@ import "./Home.css";
 import { Navbar, Sidebar } from "../components/HomeComponents";
 import { format } from "date-fns";
 
-const API_BASE = "https://final-evaluation-test-2.onrender.com";
+const API_BASE = "https://minilink-server.onrender.com";
 
 function Home() {
   const [totalClicks, setTotalClicks] = useState(0);

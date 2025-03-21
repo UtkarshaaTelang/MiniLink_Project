@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 import { format } from "date-fns";
 import { useLocation } from "react-router-dom";
 
-const API_BASE = "https://final-evaluation-test-2.onrender.com";
+const API_BASE = "https://minilink-server.onrender.com";
 
 const Links = () => {
   const [links, setLinks] = useState([]);
