@@ -8,8 +8,8 @@ import { RegisterComponents, INPUT } from "../components/RegisterComponents";
 function Register() {
   const navigate = useNavigate();
 
-  // const API_BASE = "https://final-evaluation-test-2.onrender.com";
-  const API_BASE = "http://localhost:5000";
+  const API_BASE = "https://final-evaluation-test-2.onrender.com";
+  // const API_BASE = "http://localhost:5000";
 
   const registerHandler = async (e) => {
     e.preventDefault();
