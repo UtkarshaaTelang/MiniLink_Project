@@ -5,7 +5,7 @@ import "./Links.css";
 import { Navbar, Sidebar } from "../components/HomeComponents";
 import Pagination from "../components/Pagination";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://final-evaluation-test-2.onrender.com";
 
 const Analytics = () => {
   const [analyticsData, setAnalyticsData] = useState([]);
@@ -95,11 +95,9 @@ const Analytics = () => {
                       </a>
                     </td>
                     <td>
-                      <a
-                        href={`${API_BASE}/${entry.shortCode}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >{`${API_BASE}/${entry.shortCode}`}</a>
+                      <a href={entry.shortLink} target="_blank" rel="noopener noreferrer">
+                       {entry.shortLink}
+                      </a>
                     </td>
                     <td>{entry.ipAddress}</td>
                     <td>{getUserDevice(entry.userAgent)}</td>
